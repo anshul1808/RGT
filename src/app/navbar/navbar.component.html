@@ -1,0 +1,84 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer fixedInViewport="true" 
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+  [mode]="(isHandset$ | async) ? 'over' : 'side'" 
+  [opened]="!(isHandset$ | async)">
+  <mat-toolbar color="primary"> RGT </mat-toolbar>
+    <mat-nav-list >
+      <mat-list-item class="nav-item" (click)="closeSideNav()">
+        <mat-icon matListIcon>dashboard</mat-icon>
+        <a matLine>Quaterly Report</a>
+      </mat-list-item>
+
+      <mat-list-item (click)="closeSideNav()">
+        <mat-icon matListIcon>person</mat-icon>
+        <a matLine>Annual Report</a>
+      </mat-list-item>
+
+      <mat-list-item (click)="closeSideNav()">
+        <mat-icon matListIcon>group_work</mat-icon>
+        <a matLine>Analytics</a>
+      </mat-list-item>
+
+      <mat-list-item (click)="closeSideNav()">
+        <mat-icon matListIcon>business</mat-icon>
+        <a matLine>Contact Us</a>
+      </mat-list-item>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content >
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-grid-list class = "main-content" cols="3" rowHeight="2:1">
+      <mat-grid-tile>
+        <form>
+          <mat-form-field appearance="fill" width="100%">
+            <mat-label>Favorite food</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="food">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </mat-grid-tile>
+      
+      <mat-grid-tile>
+        <form>
+        <mat-form-field appearance="fill" width="100%">
+          <mat-label>Favorite food</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="food">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <form>
+      <mat-form-field appearance="fill" width="100%">
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="food">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-grid-tile>
+    </mat-grid-list>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
