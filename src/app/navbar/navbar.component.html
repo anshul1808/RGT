@@ -76,7 +76,7 @@
   </mat-grid-tile>
   </mat-grid-list> -->
     
-    <div fxLayout="row" style = " height:10% "></div>
+    <div fxLayout="row" style = " height:8% "></div>
     <div fxLayout="row" fxLayoutAlign="center">
       <div fxFlex="30" class="item"> 
         <form>
@@ -133,6 +133,18 @@
       <div>
         <button mat-raised-button color="primary" layout="row" layout-align="center">Download Report<mat-icon matListIcon>file_download</mat-icon></button>
       </div>
+    </div>
+    <div fxLayout="row" style = " height:15% "></div>
+
+    <div fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex="90" class="card" style="width: 90%"> 
+              <div class="card-header card-chart card-header-warning" style= "box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(244,67,54,.4);" >
+                  <div class="ct-chart" id="dailySalesChart"></div>
+              </div>
+              <div class="card-body">
+                  <h4 class="card-title">Daily Number of downloads </h4>
+              </div>
+      </div>   
     </div>
 
   </mat-sidenav-content>

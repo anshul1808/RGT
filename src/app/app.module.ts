@@ -18,6 +18,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {MatInputModule} from '@angular/material/input';
+import { ChartistModule } from 'ng-chartist';
+import {MatCardModule} from '@angular/material/card';
+
+
 
 
 
@@ -43,7 +47,9 @@ import {MatInputModule} from '@angular/material/input';
     FormsModule,
     MatSelectModule,
     FlexLayoutModule,
-    MatInputModule
+    MatInputModule,
+    ChartistModule,
+    MatCardModule
     ],
   providers: [],
   bootstrap: [AppComponent]
