@@ -15,6 +15,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { GridtestComponent } from './gridtest/gridtest.component';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import {MatInputModule} from '@angular/material/input';
+
 
 
 
@@ -37,8 +41,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatListModule,
     MatGridListModule,
     FormsModule,
-    MatSelectModule
-  ],
+    MatSelectModule,
+    FlexLayoutModule,
+    MatInputModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -15,6 +15,9 @@
   background-color: #c71609;
   font-size: 20px;
 }
+.mat-form-field{
+  width: 90%;
+}
 
 .mat-toolbar {
   height: 50px;
@@ -47,6 +50,14 @@
   background: lightblue;
 }
 
-.mat-form-field-flex{
-    width: 350%;
+button.mat-primary{
+  background-color: #c71609;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(244,67,54,.4);
+  color: #ffffff;
+}
+
+.item {
+  width: 100px;
+  margin: 10px;
+  text-align: center;
 }

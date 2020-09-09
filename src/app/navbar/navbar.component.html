@@ -35,7 +35,7 @@
       </button>
     </mat-toolbar>
 
-    <mat-grid-list class = "main-content" cols="3" rowHeight="2:1">
+    <!-- <mat-grid-list class = "main-content" cols="3" rowHeight="2:1">
       <mat-grid-tile>
         <form>
           <mat-form-field appearance="fill" width="100%">
@@ -48,7 +48,7 @@
           </mat-form-field>
         </form>
       </mat-grid-tile>
-      
+
       <mat-grid-tile>
         <form>
         <mat-form-field appearance="fill" width="100%">
@@ -74,9 +74,73 @@
       </mat-form-field>
     </form>
   </mat-grid-tile>
-    </mat-grid-list>
+  </mat-grid-list> -->
+    
+    <div fxLayout="row" style = " height:10% "></div>
+    <div fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex="30" class="item"> 
+        <form>
+          <mat-form-field appearance="fill" >
+            <mat-label>Favorite food</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="food">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+      <div fxFlex="30" class="item">
+        <form>
+          <mat-form-field appearance="fill">
+            <mat-label>Favorite food</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="food">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+      <div fxFlex="40" class="item">
+        <form > 
+        <mat-form-field appearance="fill" style = " width:40% ">
+          <mat-label>Filter on Field</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="food">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" style = " width:30% ">
+          <mat-label>Select Filter</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="food">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" style = " width:30% ">
+          <mat-label>Enter Value</mat-label>
+          <input matInput placeholder="Ex. QA" value="QA45678">
+        </mat-form-field>
+      </form>
+    </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center">
+      <div>
+        <button mat-raised-button color="primary" layout="row" layout-align="center">Download Report<mat-icon matListIcon>file_download</mat-icon></button>
+      </div>
+    </div>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+
+
+
 
 
 
